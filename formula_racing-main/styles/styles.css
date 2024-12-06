@@ -462,7 +462,7 @@ footer p{
 }
 
 .TeamText p{
-font-size: 1.5vw;
+font-size: 1.4vw;
 
 }
 
@@ -475,33 +475,131 @@ font-size: 1.5vw;
     font-size: 4vw;
 }
 .CarouselTeam{
-    margin-left: 5vw;
+    margin-left: 4vw;
     margin-top: -33vw;
     grid-column: 2;
     background-color: red;
     height: 31vw;
     width: 65vw;
     clip-path: polygon(0% 0%, 94% 0%, 100% 13%, 100% 88%, 94% 100%, 0% 100%);
+    overflow: hidden;
+    
 }
 
+@keyframes CarouselScroll{
+0%{ margin-left: 4vw};
+
+100%{
+margin-left: -30vw;
+}
+}
 .Team1{
-    width: 65vw;
-    height: 35vw;
+grid-column: 1;
     background-color: rgba(0, 0, 255, 0.286);
-    margin-top: -3.5vw;
+    overflow: hidden;
 }
 
 .Team2{
-    width: 65vw;
-    height: 35vw;
+    grid-column: 2;
     background-color: rgba(38, 255, 0, 0.286);
+    overflow: hidden;
+}
+
+.Team3{
+    grid-column: 3;
+    background-color: rgba(191, 0, 255, 0.286);
+    overflow: hidden;
+}
+
+.CarouselContainer{
+    margin-top: -3.5vw;
+    width: 195vw;
+    height: 35vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .TeamHeader{
+
+    background-image: url(Carouselheader.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:#072b52;
+    padding-left: 1vw;
+    box-sizing: border-box;
+    padding-top: 1vw;
+    font-size: 1.9vw;
+    grid-column: 1;
+}
+
+.TeamHeader h3{
+margin-top: 0.7vw;
+}
+
+.LearnTeam{
+    box-sizing: border-box;
+    padding-top: 2.2vw;
+    background-color:#072b52;
+    font-family: chakra petch;
+    text-decoration: none;
+    font-size: 1.9vw;
+    display: block;
+    text-align: center;
+    font-weight: 1000;
+    grid-column: 2;
+    clip-path: polygon(0% 0%, 83% 0%, 100% 37%, 100% 100%, 0% 100%);
+    color: white;
+    transition: 0.2s ease;
+}
+
+.LearnTeam:hover{
+    background-color: white;
+    color:rgba(7, 43, 82, 1)
+}
+
+.TeamContainer{
     margin-left: 5vw;
-    width: 43vw;
+    width: 58.3vw;
     height: 6.5vw;
     position: relative;
     z-index: 3;
-    bottom: 70vh;
-    background-image: url(Carouselheader.png);
+    bottom: -11vh;
+    display: grid;
+    grid-template-columns: 43vw 1fr;
+    
+}
+
+
+.NextArrow{
+    grid-row: 1;
+    grid-column: 3;
+    background-image: url(NextArrow.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.5s ease;
+}
+
+.PrevArrow{
+    grid-row: 1;
+    grid-column: 1;
+    background-image: url(PrevArrow.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.5s ease;
+}
+
+.ArrowContainer{
+    margin-top: 17vw;
+    height: 7vw;
+    display: grid;
+    grid-template-columns: 8vw 57vw 8vw;
+    grid-template-rows: 1fr;
+    position: relative;
+    z-index: 4;
+}
+
+.PrevArrow:hover, .NextArrow:hover{
+    transform: scale(1.1,1.1);
 }

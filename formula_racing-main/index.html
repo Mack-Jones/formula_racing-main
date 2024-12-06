@@ -42,7 +42,32 @@
                 document.body.style.backgroundColor = "white";
             }
 
+            let slideIndex = 1;
+            showSlides(slideIndex);
 
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("MySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
 
             
         </script>
@@ -100,16 +125,16 @@
             </p>
         </div>
         <div class="ArrowContainer">
-            <a class="NextArrow">
+            <a onclick="plusSlides(1)" class="NextArrow">
             </a>
-            <a class="PrevArrow">
+            <a onclick="plusSlides(-1)" class="PrevArrow">
                 
             </a>
     </div>
         <section class="CarouselTeam">
             <div class="CarouselContainer">
             
-                    <div class="Team1">
+                    <div class="MySlides fade">
                         <div class="TeamContainer">
                         <div class="TeamHeader"><h3>
                             Pizza Team
@@ -118,12 +143,12 @@
                         <a class="LearnTeam" href="#">
                             LEARN MORE
                         </a>
-                        
+                        <img src="images/Pizza Team.png" id="PizzaTeam" alt="PizzaTeam">
                         </div>
                     </div>
 
                     
-                    <div class="Team2">
+                    <div class="MySlides fade">
                         <div class="TeamContainer">
                         <div class="TeamHeader"><h3>
                             Team 2
@@ -137,7 +162,7 @@
                     </div>
 
                     
-                    <div class="Team3">
+                    <div class="MySlides fade">
                         <div class="TeamContainer">
                         <div class="TeamHeader"><h3>
                             Team 3
@@ -155,14 +180,7 @@
     </div>
 
 
-
-
-
-
-
-
-
-
+<!--
     <main class="home_display">
         <section class="mission">
             <h1 class="mission_h1">Our Mission</h1>
@@ -189,5 +207,29 @@
 
     </footer>
     </div>
+    -->
+
+<section class="Event">
+    <div class="EventHero">
+        <a href="#" class="LearnMoreEvent">
+
+        </a>
+    </div>
+    <div class="EventText">
+        <h2>
+            EVENT
+            <br>
+            XX/XX
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+             sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+</section>
+
 </body>
 </html>

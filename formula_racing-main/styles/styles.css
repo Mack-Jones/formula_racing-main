@@ -445,17 +445,21 @@ footer p{
 .TeamHolder{
     background-color:#1480f5;
     width: 100vw;
-    height: 85vh;
+    height: 42vw;
     margin-top: -3vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    border-bottom: 1vw solid #1480f5;
+    
 }
 .TeamText{
     height: 100%;
     grid-column: 1;
     font-family: Montserrat;
     font-weight: 100;
-    padding: 3.2vh;
+    padding-right: 1vw;
+    padding-top: 1.1vw;
+    padding-left: 3vw;
     text-align: justify;
     text-justify: inter-word;
     box-sizing: border-box;
@@ -463,7 +467,7 @@ footer p{
 
 .TeamText p{
 font-size: 1.4vw;
-
+margin-top: -1.5vw;
 }
 
 .TeamText h2{
@@ -476,38 +480,12 @@ font-size: 1.4vw;
 }
 .CarouselTeam{
     margin-left: 4vw;
-    margin-top: -33vw;
+    margin-top: -34.5vw;
     grid-column: 2;
-    background-color: red;
-    height: 31vw;
+    background-color: rgba(0, 0, 0, 0.456);
+    height: 36vw;
     width: 65vw;
     clip-path: polygon(0% 0%, 94% 0%, 100% 13%, 100% 88%, 94% 100%, 0% 100%);
-    overflow: hidden;
-    
-}
-
-@keyframes CarouselScroll{
-0%{ margin-left: 4vw};
-
-100%{
-margin-left: -30vw;
-}
-}
-.Team1{
-grid-column: 1;
-    background-color: rgba(0, 0, 255, 0.286);
-    overflow: hidden;
-}
-
-.Team2{
-    grid-column: 2;
-    background-color: rgba(38, 255, 0, 0.286);
-    overflow: hidden;
-}
-
-.Team3{
-    grid-column: 3;
-    background-color: rgba(191, 0, 255, 0.286);
     overflow: hidden;
 }
 
@@ -518,8 +496,8 @@ grid-column: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.TeamHeader{
 
+.TeamHeader{
     background-image: url(Carouselheader.png);
     background-size: 100% 100%;
     background-position: center;
@@ -530,6 +508,8 @@ grid-column: 1;
     padding-top: 1vw;
     font-size: 1.9vw;
     grid-column: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .TeamHeader h3{
@@ -578,6 +558,7 @@ margin-top: 0.7vw;
     background-position: center;
     background-repeat: no-repeat;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 
 .PrevArrow{
@@ -588,10 +569,11 @@ margin-top: 0.7vw;
     background-position: center;
     background-repeat: no-repeat;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 
 .ArrowContainer{
-    margin-top: 17vw;
+    margin-top: 19vw;
     height: 7vw;
     display: grid;
     grid-template-columns: 8vw 57vw 8vw;
@@ -603,3 +585,23 @@ margin-top: 0.7vw;
 .PrevArrow:hover, .NextArrow:hover{
     transform: scale(1.1,1.1);
 }
+
+.mySlides {display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  #PizzaTeam{
+    margin-left: -12%;
+    margin-top: -31%;
+    width: 152%;
+
+  }

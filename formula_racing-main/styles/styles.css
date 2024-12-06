@@ -18,7 +18,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Encode Sans Condensed", Montserrat;
-    background-color: lightslategray ;
     max-width: 100vw;
 }
 h1, h2, h3, h4{
@@ -485,7 +484,7 @@ margin-top: -1.5vw;
     background-color: rgba(0, 0, 0, 0.456);
     height: 36vw;
     width: 65vw;
-    clip-path: polygon(0% 0%, 94% 0%, 100% 13%, 100% 88%, 94% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 94% 0%, 100% 10%, 100% 90%, 94% 100%, 0% 100%);
     overflow: hidden;
 }
 
@@ -543,7 +542,7 @@ margin-top: 0.7vw;
     height: 6.5vw;
     position: relative;
     z-index: 3;
-    bottom: -11vh;
+    bottom: -5.2vw;
     display: grid;
     grid-template-columns: 43vw 1fr;
     
@@ -605,3 +604,134 @@ margin-top: 0.7vw;
     width: 152%;
 
   }
+
+.Event{
+    padding: 4vw;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    height: 42vw;
+    box-sizing: border-box;
+}
+
+
+.EventText{
+    color:rgba(7, 43, 82, 1);
+    font-family: Montserrat;
+    font-weight: 200;
+    grid-column: 2;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.1vw;
+    padding-left: 3vw;
+    box-sizing: border-box;
+}
+
+.EventText h2{
+    font-family: Montserrat;
+    font-weight: 100;
+    font-size: 5vw;
+    margin-top: -2vw;
+}
+
+.EventText p{
+    margin-top: -2vw;
+}
+
+.EventHero{
+    grid-column: 1;
+    margin-top: -0.5vw;
+    clip-path: polygon(0% 12%, 7% 0%, 100% 0%, 100% 100%, 7% 100%, 0% 88%);
+    background-image: url(RacePic.png);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.LearnMoreEvent{
+    margin-left: 2vw;
+    margin-top: 23vw;
+    width: 16vw;
+    height: 7vw;
+    box-sizing: border-box;
+    padding-top: 2vw;
+    background-color: #072b52;
+    font-family: chakra petch;
+    text-decoration: none;
+    font-size: 2.3vw;
+    display: block;
+    text-align: center;
+    font-weight: 1000;
+    grid-column: 2;
+    clip-path: polygon(0% 0%, 83% 0%, 100% 37%, 100% 100%, 0% 100%);
+    color: white;
+    transition: 0.2s ease;
+}
+
+.LearnMoreEvent:hover{
+    background-color: white;
+    color:#072b52;
+}
+
+
+
+footer{
+    margin-bottom: -10px;
+    background-image: linear-gradient(to right, rgb(6, 42, 81), rgb(8, 33, 59));
+    padding-top: 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 62.5px 30px 30px 30px;
+    height: 152.5px;
+    display: grid;
+}
+
+.FooterTop{
+    grid-column: 1/6;
+    grid-row: 1;
+    width: 100%;
+    background-image: url(BannerBackground.png);
+    background-size: auto 101%;
+
+    background-position: bottom 0px right 50px;
+}
+
+.FooterItem{
+    grid-row: 3;
+    font-size: 33px;
+    text-decoration: none;
+    margin-top: -5px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 100;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.FooterItem:hover{
+    transform: scale(1.1,1.1);
+}
+
+.LogoFooter{
+    grid-row: 3;
+    grid-column: 1;
+    height: 100%;
+    width: 130px;
+    background-image: url(BYU\ Idaho\ Racing\ Logo\ V2.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 5vw;
+}
+.Socials{
+    grid-row: 3;
+    grid-column: 5;
+    height: 100%;
+    width: 105px;
+    background-image: url(SocialIcons.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 5vw;
+}
